@@ -1,9 +1,9 @@
 import imaplib
 import email
 
-my_email = "tiyasha5189@gmail.com"
-my_password = "nvregdpszbmbxinv"
-imap_server = "imap.gmail.com"
+my_email = "your_email@gmail.com"
+my_password = "your_password"
+imap_server = "imap.gmail.com" # Server you want to connect to
 
 
 with imaplib.IMAP4_SSL(imap_server) as imap:
