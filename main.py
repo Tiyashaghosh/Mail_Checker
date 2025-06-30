@@ -2,11 +2,13 @@ import imaplib
 import email
 import os
 import pandas as pd
+from dotenv import load_dotenv
 
-my_email = "youremail@gmail.com"
-app_password = "ypurapppassword"
-imap_server = "imap.gmail.com" # Server you want to connect to
+load_dotenv('.env')
 
+my_email : str = os.getenv('EMAIL')
+my_password : str = os.getenv('APP_PASSWORD')
+imap_server = "imap.gmail.com"
 # Folder where attachments will be saved
 download_folder = r"path where you wanna download the files"
 
