@@ -1,24 +1,24 @@
 # 📩 Email Attachment Downloader & Converter
 
-This Python automation script connects to your email inbox, scans for messages from specific senders, downloads Excel (.xlsx) attachments, and converts them to CSV format.
+This Python automation script connects to your Gmail inbox, scans for messages from specific senders, downloads Excel `.xlsx` attachments, converts them to CSV format, and optionally sends the converted file back to the original sender.
 
 ---
 
 ## 🚀 Features
 
-- Connects securely to Gmail using IMAP
-- Filters emails by sender 
-- Detects and downloads .xlsx attachments
-- Automatically converts .xlsx files to .csv
-- Saves converted files to a local folder
-- Avoids duplicate downloads
-- Easy to configure and extend
+- Secure Gmail access using **IMAP**
+- Filters emails by a **specific sender**
+- Detects and downloads `.xlsx` file attachments
+- Converts `.xlsx` files to `.csv` using **Pandas**
+- Automatically sends back the converted file via **SMTP**
+- Saves files to a defined local directory
+- Skips already downloaded files to avoid duplicates
+- Environment variable support for secure credentials
 
----
-
-## 🔧 Tech Stack
-
-- Python 3.x
-- imaplib, email – for email access
-- pandas, openpyxl – for Excel to CSV conversion
-- os – for file handling
+🔧 Tech Stack
+Python 3.x
+imaplib, email – Accessing and parsing emails
+smtplib, email.message – Sending emails with attachments
+pandas, openpyxl – Excel to CSV conversion
+os – File and directory handling
+dotenv – Securely load credentials from .env
